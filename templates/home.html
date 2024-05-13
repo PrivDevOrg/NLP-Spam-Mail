@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	
+</head>
+
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			
+		</div>
+		<h2>Spam Detector</h2>
+		
+	</div>
+	</header>
+	<body>
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Message</p>
+	
+		<textarea name="message" id="message" rows="4" cols="50" required></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Check">
+		
+	</form>
+		
+	</div>
+
+	
+	
+</body>
+</html>

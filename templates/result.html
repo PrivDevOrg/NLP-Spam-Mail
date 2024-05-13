@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			
+		</div>
+		<h2>Spam Detector</h2>
+		
+	</div>
+	</header>
+	<br>
+</br>
+	<div class="results">
+
+	
+		<button onclick="window.location.href = 'http://127.0.0.1:5000/'">New Message</button>
+		<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+		<textarea name="showmessage" id="showmessage" readonly rows="4" cols="50">{{messagex}}</textarea>
+	
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Spam</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html> 
